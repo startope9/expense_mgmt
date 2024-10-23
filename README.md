@@ -9,9 +9,7 @@ An expense-sharing web application built using Python Flask (backend) and React 
 3. [Installation and Setup](#installation-and-setup)
 4. [Backend API Routes](#backend-api-routes)
 5. [Frontend Usage](#frontend-usage)
-6. [Generating Balance Sheet PDF](#generating-balance-sheet-pdf)
-7. [Contributing](#contributing)
-8. [License](#license)
+5. [Note](#Note)
 
 ---
 
@@ -66,8 +64,6 @@ An expense-sharing web application built using Python Flask (backend) and React 
    ```bash
     python app.py
 
-
-
 ### 1. Frontend Setup
 
 2. **move to frontend directory**:
@@ -88,10 +84,12 @@ An expense-sharing web application built using Python Flask (backend) and React 
 
 ## Backend API Routes
 
-* **POST `user/create`**: Register a new user with email and password.
-* **POST `user/login`**: Log in with email and password. Sessions are managed with Redis.
-* **POST `expense/add_expenses`**: Add a new expense (amount, payer, split data).
-* **GET `/expenses/:email`**: Fetch all expenses for the given user email.
+* **POST `/user/create_user`**: Register a new user with email and password.
+* **POST `/user/login`**: Log in with email and password. Sessions are managed with Redis.
+* **POST `/user/login`**: User can logout after login.
+* **POST `/expense/add_expenses`**: Add a new expense (amount, payer, split data).
+* **GET `/expense/get_expenses`**: Fetch all expenses for the logged in user.
+* **GET `/expense/download_balance_sheet`**: Download the expenses of the logged in user in pdf format.
 
 ---
 
@@ -99,7 +97,11 @@ An expense-sharing web application built using Python Flask (backend) and React 
 
 The application’s frontend is built with React and includes the following features:
 
-* **Login/Signup**: Forms for user authentication.
-* **Add Expense**: Add expenses with options to split equally or by percentage.
-* **View Expenses**: Display expenses with details of splits and participants.
+* **/**: Home page to containing form to create user.
+* **/login**: Form for user authentication.
+* **/addExpense**: Add expenses with options to split equally or by percentage or by exact.
+* **/getExpense**: Display the users expenses with details of splits and participants.
+* **/downloadSheet**: Download the users expenses with details of splits and participants in pdf format.
 
+## Note
+Frontend runs on http://localhost:3000/ while backend runs on http://localhost:5000/ 

@@ -26,7 +26,7 @@ export default function Login() {
                     <label htmlFor="email">
                         <i className="far fa-envelope"></i>Your Email
                     </label>
-                    <input type="text" name="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="e.g. John Doe" required />
+                    <input type="text" name="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="e.g. sample@xyz.com" required />
                 </div>
                 <div className="field" tabIndex="2">
                     <label htmlFor="password">
