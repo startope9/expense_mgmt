@@ -50,4 +50,56 @@ An expense-sharing web application built using Python Flask (backend) and React 
 
    ```bash
    git clone https://github.com/startope9/expense_mgmt.git
-   cd expense-sharing-system/backend
+
+2. **move to backend directory**:
+
+   ```bash
+   cd backend
+
+3. **Install the required packages**:
+
+   ```bash
+   pip install -r requirements.txt
+
+4. **Run backend server**:
+
+   ```bash
+    python app.py
+
+
+
+### 1. Frontend Setup
+
+2. **move to frontend directory**:
+
+   ```bash
+   cd frontend
+
+3. **Install the frontend dependencies**:
+
+   ```bash
+   npm install
+
+4. **Run frontend server**:
+
+   ```bash
+    npm start
+
+
+## Backend API Routes
+
+* **POST `user/create`**: Register a new user with email and password.
+* **POST `user/login`**: Log in with email and password. Sessions are managed with Redis.
+* **POST `expense/add_expenses`**: Add a new expense (amount, payer, split data).
+* **GET `/expenses/:email`**: Fetch all expenses for the given user email.
+
+---
+
+## Frontend Usage
+
+The application’s frontend is built with React and includes the following features:
+
+* **Login/Signup**: Forms for user authentication.
+* **Add Expense**: Add expenses with options to split equally or by percentage.
+* **View Expenses**: Display expenses with details of splits and participants.
+
