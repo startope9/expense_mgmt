@@ -86,7 +86,7 @@ An expense-sharing web application built using Python Flask (backend) and React 
 
 * **POST `/user/create_user`**: Register a new user with email and password.
 * **POST `/user/login`**: Log in with email and password. Sessions are managed with Redis.
-* **POST `/user/login`**: User can logout after login.
+* **POST `/user/logout`**: User can logout after login.
 * **POST `/expense/add_expenses`**: Add a new expense (amount, payer, split data).
 * **GET `/expense/get_expenses`**: Fetch all expenses for the logged in user.
 * **GET `/expense/download_balance_sheet`**: Download the expenses of the logged in user in pdf format.
