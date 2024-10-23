@@ -1,0 +1,52 @@
+.header {
+    overflow: hidden;
+}
+
+.nav-bar {
+    border-bottom: 2px solid #49f4d5;
+    /* background-image: linear-gradient(to bottom, white, #68fce1); */
+}
+
+.items-not-1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #3a3345dd;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+
+.items-not-1 div {
+    margin: 1.5%;
+    padding: 0.2% 3% 0.2% 3%;
+    border-radius: 7px;
+    color: white;
+    transition: all 0.5s cubic-bezier(0.215, 0.610, 0.355, 1);
+    font-family: 'Josefin Sans', cursive;
+}
+
+.items-not-1 div:hover {
+    cursor: pointer;
+    color: #3A3345;
+    outline-color: #45ffdd;
+    background-color: white;
+    text-decoration: underline;
+    padding: 0.5% 4% 0.5% 4%;
+}
+
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 200;
+    background-color: #3A3345;
+}
+
+@media screen and (max-width:550px) {
+    .items-not-1 div {
+        margin: 3%;
+        padding: 0.4% 3% 0.4% 3%;
+    }
+}
