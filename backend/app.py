@@ -3,15 +3,7 @@ from flask_cors import CORS
 import redis
 from routes import expense_routes, user_routes
 from flask_session import Session
-import bcrypt
 
-# r = redis.Redis(
-#     host='redis-15957.c305.ap-south-1-1.ec2.redns.redis-cloud.com',
-#     port=15957,
-#     password='fGRs66o0K32H9V5D7SWDl5aeg86HXRpc')
-
-# r = redis.from_url(
-#     'redis://default:fGRs66o0K32H9V5D7SWDl5aeg86HXRpc@redis-15957.c305.ap-south-1-1.ec2.redns.redis-cloud.com:15957')
 app = Flask(__name__)
 SECRET_KEY = 'afuibewyhfqwj9028yr378y'
 app.config.from_object(__name__)
